@@ -11,7 +11,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate # Ruta corregida
-ffrom langchain.chains import RetrievalQA   # ✅ LÍNEA CORREGIDA
+from langchain.chains import RetrievalQA   # ✅ LÍNEA CORREGIDA
 
 # --- Configuración de Flask ---
 app = Flask(__name__)
