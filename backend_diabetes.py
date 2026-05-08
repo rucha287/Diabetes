@@ -12,7 +12,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate # Ruta corregida
 from langchain.chains import RetrievalQA   # ✅ LÍNEA CORREGIDA
-
+try:
+    from langchain.chains import RetrievalQA
+except Exception as e:
+    print(f"ERROR IMPORTANDO RetrievalQA: {e}")
+    raise
 # --- Configuración de Flask ---
 app = Flask(__name__)
 CORS(app)
