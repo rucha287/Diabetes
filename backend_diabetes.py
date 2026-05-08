@@ -11,12 +11,8 @@ from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate # Ruta corregida
-from langchain.chains.retrieval_qa.base import RetrievalQA # Ruta específica
-try:
-   from langchain.chains.retrieval_qa.base import RetrievalQA # Ruta específica
-except Exception as e:
-    print(f"ERROR IMPORTANDO RetrievalQA: {e}")
-    raise
+from langchain.chains.retrieval import RetrievalQA # Ruta específica
+
 # --- Configuración de Flask ---
 app = Flask(__name__)
 CORS(app)
